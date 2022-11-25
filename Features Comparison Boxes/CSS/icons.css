@@ -1,0 +1,133 @@
+
+
+/*                              This is The First Test              */
+
+/* False Icon */
+
+.site-w {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.true {
+  background-color: #e91e63;
+}
+
+.true div:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.true div {
+  background-color: white;
+  width: 13%;
+  height: 80%;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.true div:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* True Icon */
+.false {
+  background-color: #009688;
+}
+
+.false div:first-child {
+  background-color: white;
+  width: 13%;
+  height: 60%;
+  
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.false div:last-child {
+  background-color: white;
+  width: 13%;
+  height: 30%;
+  
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  
+
+  transform:  translate(-100%, 10%) rotate(-45deg);
+}
+
+
+
+
+
+/*                        End The First Test                             */
+
+
+
+/* FrameWork Prop */
+.test2 {
+  /* Fixed Prop */
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.test2::before,
+.test2::after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  top: 50%;
+}
+
+
+/* Test 2 True Icon */
+
+.test2-true {
+  background-color: #009688;
+}
+
+.test2-true::before {
+  height: 60%;
+  left: 55%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.test2-true::after {
+  height: 30%;
+  left: 30%;
+  transform:  translate(-100%, 0%) rotate(-45deg);
+}
+
+.test2-true::before,
+.test2-true::after {
+  width: 13%;
+}
+
+/* Test 2 False Icon */
+
+.test2-false {
+  background-color: #e91e63;
+}
+
+.test2-false::before,
+.test2-false::after {
+  width: 13%;
+  height: 80%;
+  left: 50%;
+
+}
+
+.test2-false::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.test2-false::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
