@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
+  box-shadow: 1px 2px 3px rgb(41, 41, 41);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+div::before {
+  content: "0";
+
+  font-weight: bold;
+  font-size: 150px;
+  animation: increment 3s linear 0s infinite;
+
+}
+
+div:nth-child(2)::before {
+  animation-delay: 3s;
+}
+
+div:first-child::before {
+  animation-delay: 6s;
+}
+
+@keyframes increment {
+  11% {
+    content: "1";
+    color: royalblue;
+  }
+
+  21% {
+    content: "2";
+    color: turquoise;
+  }
+
+  31% {
+    content: "3";
+    color: rebeccapurple;
+  }
+
+  41% {
+    content: "4";
+    color: yellow;
+  }
+
+  51% {
+    content: "5";
+    color: green;
+  }
+
+  61% {
+    content: "6";
+    color: red;
+  }
+
+  71% {
+    content: "7";
+    color: black;
+  }
+
+  81% {
+    content: "8";
+    color: blue;
+  }
+
+  92% {
+    content: "9";
+    color: crimson;
+  }
+
+}
