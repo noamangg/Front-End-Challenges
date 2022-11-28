@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  /* Variables */
+  --sectionBg2: white;
+  --sectionBg: #eee;
+  --marginContainer: 10%;
+  --paddingTopSection: 15px;
+}
+
+/* Frame Work */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.container {
+  margin-left: var(--marginContainer, 10%);
+  margin-right: var(--marginContainer, 10%);
+  padding-top: var(--paddingTopSection, 20px);
+  align-items: center;
+}
+
+/* Frame Work Done */
+
+body {
+  width: 100%;
+  
+  height: 100vh;
+
+  background-color: var(--sectionBg2, white);
+}
+
+/* Header Style */
+header .container ul {
+  list-style: none;
+  min-width: 25%;
+  padding: 0;
+  margin: 0;
+}
+
+header .container ul li a {
+  text-decoration: none;
+  color: black;
+}
+header .container ul li a:hover {
+  font-weight: bold;
+}
+/* Header Style Done */
+
+
+/* Home Style */
+section.home{
+  background-color: var(--sectionBg, #eee);
+}
+
+section.home > .container {
+  --paddingTopSection: 30px;
+  padding-bottom: var(--paddingTopSection);
+}
+
+section.home .container h1 span {
+  color: #03a9f4;
+}
+
+section.home .container p {
+  line-height: 1.8;
+  margin-top: 0;
+  text-align: center;
+}
+/* Home Style Done */
+
+/* Services Style */
+section.services {
+  background-color: var(--sectionBg2, white);
+
+  
+}
+
+section.services > .container {
+  --paddingTopSection: 30px;
+  gap: 10px;
+  padding-bottom: var(--paddingTopSection);
+}
+
+section.services div.container > div {
+  width: calc(100% / 3 - (20px / 3));
+  
+  align-items: start;
+}
+
+section.services div.container > div:nth-child(2) {
+  align-self: start;
+}
+
+section.services .container div img {
+  width: 50%;
+}
+
+section.services .container div h3 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+section.services .container div p {
+  text-align: center;
+  margin-top: 0;
+}
+/* Services Style Done */
+
+/* About Style */
+
+section.about {
+  background-color: var(--sectionBg, #eee);
+
+}
+
+section.about .container {
+  gap: 10px;
+  --paddingTopSection: 30px;
+  padding-bottom: var(--paddingTopSection);
+}
+section.about .container > img {
+  width: 20%;
+}
+section.about .container .about-us {
+  display: flex;
+  width: calc(80% - 10px);
+}
+
+section.about .about-us p {
+  line-height: 1.6;
+  margin-top: 0;
+}
+/* About Style Done */
+
+/* Numbers Style */
+
+section.numbers .container {
+  --paddingTopSection: 30px;
+  padding-bottom: var(--paddingTopSection);
+}
+
+section.numbers .container div {
+  text-align: center;
+  
+  background-color: #b33939;
+  width: calc(100% / 3 - (20px / 3));
+  padding: 30px 0;
+  color: white;
+  font-size: 12px;
+}
+
+section.numbers .container div::before {
+  content: "10";
+  width: 100%;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+  
+}
+section.numbers .container div:nth-child(2) {
+  background-color: #227093;
+}
+
+section.numbers .container div:nth-child(2)::before {
+  content: "70";
+}
+
+section.numbers .container div:nth-child(3) {
+  background-color: #218c74;
+}
+
+section.numbers .container div:nth-child(3)::before {
+  content: "120";
+}
+/* Numbers Style Done */
+
+/* Skills Style */
+section.skills {
+  background-color: var(--sectionBg, #eee);
+}
+
+section.skills .container {
+  --paddingTopSection: 30px;
+  padding-bottom: var(--paddingTopSection);
+}
+section.skills .container h2 {
+  width: 100%;
+  text-align: center;
+}
+
+section.skills .container div.progress {
+  width: 100%;
+  justify-content: end;
+}
+
+section.skills .container div.progress > div {
+  width: 100%;
+  position: relative;
+}
+section.skills .container div.progress > div > p {
+  font-weight: bold;
+  text-align: end;
+  margin-right: 10px;
+  width: calc(15% - 10px);
+}
+section.skills .container div.progress > div > div:first-of-type {
+  background-color: #03a9f4;
+  height: 35px;
+  width: calc((85% - 10px) * 60 / 100);
+  
+  justify-content: end;
+  padding: 0 5px;
+}
+section.skills .container div.progress > div > div::before {
+  content: "60%";
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+section.skills .container div.progress > div > div:last-of-type {
+  width: calc((85% - 10px) * 40 / 100);
+  height: 35px;
+  background-color: white;
+}
+
+section.skills .container div.progress > div:nth-child(2) > div:first-of-type {
+  width: calc((85% - 10px) * 70 / 100);
+}
+
+section.skills .container div.progress > div:nth-child(2) > div::before {
+  content: "70%";
+}
+section.skills .container div.progress > div:nth-child(2) > div:last-of-type {
+  width: calc((85% - 10px) * 30 / 100);
+}
+
+section.skills .container div.progress > div:nth-child(3) > div:first-of-type {
+  width: calc((85% - 10px) * 80 / 100);
+}
+
+section.skills .container div.progress > div:nth-child(3) > div::before {
+  content: "80%";
+}
+section.skills .container div.progress > div:nth-child(3) > div:last-of-type {
+  width: calc((85% - 10px) * 20 / 100);
+}
+
+
+section.skills .container div.progress > div:nth-child(4) > div:first-of-type {
+  width: calc((85% - 10px) * 65 / 100);
+}
+
+section.skills .container div.progress > div:nth-child(4) > div::before {
+  content: "65%";
+}
+section.skills .container div.progress > div:nth-child(4) > div:last-of-type {
+  width: calc((85% - 10px) * 35 / 100);
+}
+
+section.skills .container div.progress > div:nth-child(5) > div:first-of-type {
+  width: calc((85% - 10px) * 90 / 100);
+}
+section.skills .container div.progress > div:nth-child(5) > div::before {
+  content: "90%";
+}
+section.skills .container div.progress > div:nth-child(5) > div:last-of-type {
+  width: calc((85% - 10px) * 10 / 100);
+}
+
+/* Skills Style Done */
+
+
+/* Footer Style */
+
+footer {
+  background-color: #333;
+  color: white;
+}
+
+footer .container {
+  padding: 0;
+  font-size: 14px;
+}
+
+footer .container p a {
+  color: #03a9f4;
+  text-decoration: none;
+}
+/* Footer Style Done */
+
+
+@media (max-width: 550px) {
+  section.services div.container > div {
+    width: 100%;
+  }
+  
+  section.about div.container img {
+    width: 100%;
+  }
+  
+  section.about div.container div.about-us {
+    text-align: center;
+    width: 100%;
+  }
+  section.about div.container div.about-us h2 {
+    width: 100%;
+  }
+  
+  section.numbers .container div::before {
+    font-size: 20px;
+  }
+  
+  footer .container {
+    justify-content: center;
+  }
+  
+  header .container h2 {
+    font-size: 18px;
+  }
+  header .container ul {
+    min-width: 67%;
+    font-size: 14px;
+  }
+}
