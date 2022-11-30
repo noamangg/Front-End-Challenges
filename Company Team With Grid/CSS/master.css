@@ -84,6 +84,28 @@ div.member i {
   color: #b1afb2;
 }
 
+@media (max-width: 900px)and (min-width: 451px) {
+  main {
+    padding: 20px 5%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px)
+{
+  main {
+    padding: 20px 5%;
+    grid-template-columns: 1fr;
+  }
+  main div.member:first-child,
+  main div.member:nth-child(5),
+  main div.member:nth-child(6) {
+    grid-column: span 1 ;
+  }
+  
+  
+}
+
 
 
 
