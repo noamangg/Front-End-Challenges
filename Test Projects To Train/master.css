@@ -1,0 +1,102 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* 
+.parent {
+  width: 100px;
+  height: 100px;
+  
+  border-radius: 50%;
+  
+  border: 4px green solid;
+  border-left-style: dotted;
+  border-bottom-style: dotted;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  animation-name: smallCircle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+
+}
+
+.parent > div {
+  width: 50px;
+  height: 50px;
+  border: inherit;
+  border-bottom-style: solid;
+  border-right-style: dotted;
+  border-radius: inherit;
+  
+  animation-name: smallCircle2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+@keyframes smallCircle {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes smallCircle2 {
+  to {
+    transform: rotate(2turn);
+  }
+} */
+
+div {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+}
+
+div span {
+  font-size: 80px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1;
+  mix-blend-mode: difference;
+}
+
+div::before{
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  
+  content: "";
+  
+  z-index: -1;
+  
+  background-color: white;
+  
+
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0%, 100% {
+    left: 0;
+  }
+  50%{
+    left: calc(100% - 100px);
+  }
+}

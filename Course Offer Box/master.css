@@ -1,0 +1,122 @@
+:root {
+  --bgColor: #51509b;
+  --buttonColor: #e5af40;
+  --fontColor: #4a5568;
+  --fontColo2: #333c4d;
+  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+}
+
+.container {
+  
+  margin: 20px 5%;
+  background-color: var(--bgColor);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 75px;
+}
+
+.container  .boxes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+}
+
+.container .boxes .box {
+  background-color: white;
+  color: var(--fontColor);
+  padding: 40px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.container .boxes .box:last-child {
+  margin-left: -8px;
+  padding: 20px 40px;
+  background-color: #fefefe;
+}
+.container .boxes .box h2 {
+  position: relative;
+  width: fit-content;
+  z-index: 1;
+}
+.container .boxes .box h2::after {
+  background-color: var(--buttonColor);
+  width: calc(100% - 40px);
+  height: 5px;
+  content: "";
+  position: absolute;
+  left: 40px;
+  bottom: 2px;
+  opacity: .3;
+  
+  z-index: -1;
+}
+
+.container .boxes .box .features p {
+  color: var(--fontColor2);
+  margin: 0;
+  padding:  10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.container .boxes .box .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.container .boxes .box .price p {
+  font-size: 50px;
+  position: relative;
+  font-weight: bold;
+}
+.container .boxes .box .price p::before {
+  content: "$";
+  font-size: 25px;
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  font-weight: normal;
+}
+
+.container .boxes .box .price p::after {
+  content: "USD";
+  font-size: 15px;
+  font-weight: normal;
+}
+
+
+.container .boxes .box .price button {
+  margin-right: 50px;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: var(--buttonColor);
+  border-radius: 4px;
+}
+
+.container .boxes .box > p:last-child span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.container .boxes .box:first-child {
+  box-shadow: 4px 2px 20px rgb(46, 46, 46);
+  z-index: 1;
+}
