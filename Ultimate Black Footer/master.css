@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;300;400;500;600;700;800;900;1000&family=Manrope:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  --fontColor: #979797;
+  --fFooterColor: #2b2b2b;
+  --footerColor: #333333;
+  --headerColor: white;
+  --buttonColor: #e52727;
+  --buttonBorder: #5f3030;
+}
+
+.container {
+  margin: 0 5%;
+}
+
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  width: 100%;
+  background-color: var(--footerColor);
+  color: var(--fontColor, #656565);
+}
+
+footer .col2 {
+  background-color: var(--fFooterColor, #2b2b2b);
+  display: flex;
+}
+
+footer .col2 .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+footer .col2 .container p > span {
+  color: white;
+  font-weight: bold;
+}
+
+
+footer .col2 .container .credit-card {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+footer .col2 .container .credit-card img {
+  width: 50px;
+  height: 30px;
+}
+
+
+footer .col1 .container {
+  display: grid;
+  grid-template-columns: 2fr auto auto 2fr;
+  gap: 40px;
+  padding: 40px 0px;
+}
+
+footer .col1 .container > div > h2 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+footer .col1 .container > div .text {
+  font-size: 16px;
+}
+footer .col1 .container > div .text > div h3 {
+  font-size: 16px;
+  color: white;
+  font-weight: normal;
+}
+
+footer .col1 .container .contact .text > p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+footer .col1 .container .contact .text .contact-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  line-height: 1.4;
+}
+footer .col1 .container .contact .text .contact-info > div > p:first-child{
+  text-transform: uppercase;
+}
+
+.container .newsletter .text {
+  line-height: 1.4;
+}
+.container .newsletter .text .input-f {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 5px;
+}
+.container .newsletter .text .input-f input:first-child {
+  width: 60%;
+  background-color: #656565;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 0px 10px ;
+  color: white;
+}
+
+.container .newsletter .text .input-f input:first-child::placeholder {
+  color: rgb(209, 209, 209);
+}
+
+.container .newsletter .text .input-f input:last-child {
+  border-radius: 2px;
+  border: none;
+  color: white;
+  background-color: var(--buttonColor, #e52727);
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+
+.container .newsletter .text .socail .social-icons img {
+  width: 40px;
+  height: 40%;
+  cursor: pointer;
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--fontColor, #656565);
+  padding: 1px 4px;
+  border-radius: 2px;
+  
+  transition-duration: .5s;
+  position: relative;
+
+}
+a:hover {
+  background-color: var(--fFooterColor);
+  color: white;
+  padding-left: 10px; 
+}
+
+.socail .social-icons > a:hover {
+  padding: 1px 4px;
+  background-color: transparent;
+}
