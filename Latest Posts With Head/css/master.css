@@ -1,0 +1,131 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  
+  --mainBGColor: #eee;
+  --orangeColor: #ff5722;
+  --pColor: #959798;
+  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+
+header {
+  width: 100%;
+  min-height: 100px;
+  border-bottom: 8px solid var(--mainBGColor, #eee);
+  margin-bottom: 80px;
+  position: relative;
+}
+
+header .links {
+  color: white;
+  width: 80%;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+header .links p {
+  text-transform: uppercase;
+}
+header .links p:first-child {
+  background-color: var(--orangeColor, #ff5722);
+  padding: 20px;
+  position: relative;
+}
+
+header .links p:first-child::before {
+  background-color: #ffab91;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+}
+header .links p:last-child {
+  color: black;
+  background-color: var(--mainBGColor);
+  padding: 20px;
+}
+header .links p:last-child::after {
+  background-color: var(--orangeColor, #ff5722);
+  content: "\f078";
+  font-family: "Font Awesome 3 Free";
+  height: 100%;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: -40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+main section {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  background-color: var(--mainBGColor);
+  align-items: center;
+}
+main section > img {
+  height: 150px;
+  width: 150px;
+}
+main section div.text {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 10px;
+}
+main section div.text div.icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 5px;
+  color: var(--pColor, #ffab91);
+  font-size: 13px;
+}
+
+main section div.text div.icons div.icon {
+  display: flex;
+  gap: 5px;
+}
+
+main section div.text div.icons div.icon:nth-child(2) > p::before {
+  content: "0 ";
+}
+main section:nth-child(2) div.text div.icons div.icon:nth-child(2) > p::before {
+  content: "1 ";
+}
+
+main section div.text div.icons div.icon:nth-child(3) > p::before {
+  content: "150 ";
+}
+main section:first-of-type div.text div.icons div.icon:nth-child(3) > p::before {
+  content: "120 ";
+}
+
+@media (max-width: 467px) {
+  main {
+    padding: 0 2%;
+  }
+}
