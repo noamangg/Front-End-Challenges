@@ -1,0 +1,183 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  
+  --mainColor: #edbf47  
+}
+
+.news {
+  position: relative
+}
+
+.news::before {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+
+  content: "News";
+  color: white;
+  padding: .5rem 1rem;
+  background-color: #495052;
+  /* border: 0.0625em #bcbebe solid; */
+  border-radius: 0.25rem;
+  cursor: pointer;
+  z-index: 1
+}
+
+.news::after {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  content: "READ MORE";
+  color: white;
+  padding: .5rem 1rem;
+  background-color: rgb(0 0 0 / 10%);
+  border-radius: 0.25rem;
+  cursor: pointer
+}
+
+.text {
+  padding: 1.5rem 1.5rem 4rem 1.5rem
+}
+.text p {
+  line-height: 1.8
+}
+
+.container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  justify-content: space-between;
+  color: white
+
+  
+}
+.col {
+  display: grid;
+  gap: 2rem;
+  grid-template-rows: auto auto
+}
+
+.col > div {
+  border-radius: 0.25rem;
+  width: 100%;
+  background-color: var(--mainColor);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  
+  overflow: hidden
+
+}
+.col > div .img {
+  width: 100%;
+  overflow: hidden
+}
+.col > div  img {
+  width: 100%;
+  border-radius: 0.25rem;
+  transition: .5s
+  
+}
+.col > div:hover  img {
+  transform:  rotate(10deg);
+  filter: grayscale(100%)
+}
+
+.col > div h2 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: normal
+}
+
+.col .check .text,
+.col .cooking .text,
+.col .john-doe .text {
+  padding: 1rem 1.5rem
+}
+
+.container .col  .check {
+  grid-template-rows: 1fr
+}
+.container .col  .check .text {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  align-items: center
+}
+
+.container .col  .check .text img {
+  width: 1.5rem;
+  filter: contrast(.1) brightness(12)
+}
+
+
+.cooking::after {
+  content: "";
+  padding: 0
+}
+
+.cooking .text h2 {
+  margin: 0
+}
+
+
+.col .john-doe {
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.5
+}
+
+div.col > div.john-doe p:last-child {
+  font-size: 1.5rem;
+  font-weight: bold
+}
+div.col > div.john-doe p:last-child::before {
+  content: "^ _ ^ "
+}
+
+/* Coloring Boxes */
+
+.col:first-child :last-child {
+  --mainColor: #6fc191
+}
+
+.col:nth-child(2) :first-child {
+  --mainColor: #ec774b
+}
+.col:nth-child(2) :last-child {
+  --mainColor: #e16c6c
+}
+.col:last-child :first-child {
+  --mainColor: #74cee4
+}
+.col:last-child :last-child {
+  --mainColor: #c389ce;
+  cursor: pointer
+}
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+    gap: 1.5rem ;
+  }
+  .container .col {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem ;
+  }
+  .container .col {
+    gap: 1rem;
+  }
+}
