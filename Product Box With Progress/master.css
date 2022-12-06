@@ -1,0 +1,167 @@
+/* No Class */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  margin: 0;
+  --mainColor: #009688;
+  --paragraphColor: #999999;
+  --mainParagraphColor: rgb(102, 102, 102);
+}
+
+p {
+  color: var(--paragraphColor);
+  letter-spacing: .02rem;
+}
+
+body {
+  background-color: #eee;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body > div:first-child {
+  position: relative;
+  width: 40%;
+  background-color: white;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+body > div:first-child > div:first-child {
+  position: relative;
+}
+body > div:first-child > div:first-child > img:first-of-type {
+  width: 100%;
+
+}
+body > div:first-child > div:first-child > img:last-of-type {
+  position: absolute;
+  right: 2rem;
+  bottom: -3rem;
+  cursor: pointer;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  transition: .5s;
+  transition-property: width, height, right, bottom;
+}
+body > div:first-child > div:first-child > img:last-of-type:hover {
+  width: 9rem;
+  height: 9rem;
+  right: .5rem;
+  bottom: -4.5rem;
+}
+
+
+
+body > div > div:last-child {
+  padding: 1rem;
+}
+body > div > div:last-child h2 {
+  font-weight: normal;
+  text-transform: capitalize;
+}
+body > div > div:last-child > p:first-of-type {
+  margin: 1rem 0;
+}
+body > div > div:last-child > p:first-of-type > span {
+  color: var(--mainColor);
+}
+body > div > div:last-child > p:first-of-type > span > img {
+  height: 1rem;
+  margin: 0 .2rem;
+  display: inline-block;
+}
+body > div > div:last-child > p:last-of-type {
+  line-height: 1.3;
+  color: var(--mainParagraphColor);
+}
+body > div > div:last-child > div:first-of-type {
+  margin-bottom: .5rem;
+  margin-top: 2rem;
+  display: flex;
+  cursor: pointer;
+  width: fit-content;
+}
+body > div > div:last-child > div:first-of-type:hover > img {
+  transform: rotate(1turn);
+}
+body > div > div:last-child > div:first-of-type > img {
+  width: 1rem;
+  margin-right: .5rem;
+  display: inline-block;
+  transition: .5s;
+
+}
+body > div > div:last-child > div:first-of-type > p {
+  font-size: .8rem;
+  color: var(--mainParagraphColor);
+  font-weight: bold;
+}
+
+body > div > div:last-child > div:nth-of-type(2) {
+  width: 100%;
+  height: 1rem;
+  background-color: rgba(231, 231, 231, 0.8);
+  position: relative;
+  cursor: pointer;
+}
+body > div > div:last-child > div:nth-of-type(2)::before {
+  width: 50%;
+  height: inherit;
+  background-color: var(--mainColor);
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 1s;
+
+}
+body > div > div:last-child > div:nth-of-type(2):hover::before {
+  width: 0;
+}
+body > div > div:last-child > div:last-of-type {
+  display: grid;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+body > div > div:last-child > div:last-of-type > div >p:first-child {
+  width: 100%;
+  color: black;
+  font-size: 1.5rem;
+}
+body > div > div:last-child > div:last-of-type > div > p:first-child {
+  transition: 2s;
+  transition-property: transform;
+  transform-origin: center;
+  width: fit-content;
+}
+body > div > div:last-child > div:last-of-type > div:hover >p:first-child {
+  transform: rotate(1turn);
+}
+
+body a {
+  font-size: .6rem;
+  text-decoration: none;
+  color: #333;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+@media (max-width: 67.9375rem) {
+  body > div:first-child {
+    width: 90%;
+  }
+}
