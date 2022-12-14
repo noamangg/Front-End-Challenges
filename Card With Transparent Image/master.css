@@ -27,14 +27,11 @@ body {
 }
 
 .container {
-  padding: 40px 20px;
+  padding: 3rem 2rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  min-width: 450px;
-  
   background-color: white;
   border-radius: 6px;
 }
@@ -95,6 +92,15 @@ img {
   background-color: var(--bgColor);
   text-align: center;
 }
+.text .account p:first-child {
+  margin-right: 6rem;
+}
 .text .account:not(:first-child) {
   margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+  .text .account p:first-child {
+    margin-right: 1.5rem;
+  }
 }

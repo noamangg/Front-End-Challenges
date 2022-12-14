@@ -1,7 +1,7 @@
 * {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  
+  box-sizing: border-box;
   --mainColor: #13c8a6;
   --mainColorBlack: #229e87;
 }
@@ -17,7 +17,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: .8rem;
-
+  width: 100%;
 }
 
 .plans .plan {
@@ -99,4 +99,15 @@ body {
 .plans .plan.plan-three button {
   --mainColor: #555fae;
   --mainColorBlack: #3c4481;
+}
+
+@media (max-width: 767px) {
+  .plans {
+    padding: 2rem;
+    justify-content: center;
+  }
+  .plans .plan {
+    margin-right: 0;
+    padding: 4rem;
+  }
 }
