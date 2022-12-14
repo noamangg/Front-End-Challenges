@@ -154,3 +154,23 @@ a:hover {
   padding: 1px 4px;
   background-color: transparent;
 }
+
+@media (max-width: 767px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+  footer .col1 .container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+   }
+   footer .col2 .container {
+    flex-direction: column;
+   }
+   footer .col1 .container > div > h2 {
+    margin-bottom: 1rem;
+   }
+   footer .col1 .container > div .text > div h3 {
+    font-size: 13px;
+    text-align: center;
+   }
+}

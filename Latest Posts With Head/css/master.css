@@ -21,7 +21,7 @@ header {
   width: 100%;
   min-height: 100px;
   border-bottom: 8px solid var(--mainBGColor, #eee);
-  margin-bottom: 80px;
+  margin-bottom: 4rem;
   position: relative;
 }
 
@@ -59,7 +59,7 @@ header .links p:last-child {
   background-color: var(--mainBGColor);
   padding: 20px;
 }
-header .links p:last-child::after {
+header .links p:last-child::before {
   background-color: var(--orangeColor, #ff5722);
   content: "\f078";
   font-family: "Font Awesome 3 Free";
@@ -127,5 +127,12 @@ main section:first-of-type div.text div.icons div.icon:nth-child(3) > p::before 
 @media (max-width: 467px) {
   main {
     padding: 0 2%;
+  }
+  header .links {
+    width: 80%;
+  }
+  header .links p {
+    font-size: .8rem;
+    padding: 1rem .5rem !important;
   }
 }

@@ -2,9 +2,9 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  
+  margin: 0;
   --mainColor: #cf2e2e;
-  
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -20,14 +20,15 @@ body {
   align-items: center;
 }
 
-.container > .image {
+.container>.image {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
 }
-.container .image > .img {
+
+.container .image>.img {
   border: 15px solid rgb(207, 46, 46, .5);
   position: relative;
   width: 405.3px;
@@ -36,9 +37,9 @@ body {
 
 .container .image .img img {
   position: absolute;
-  height: 250px;
   left: -60px;
   top: 50%;
+  width: 90%;
   transform: translateY(-50%);
   border-radius: 8px;
 }
@@ -47,24 +48,26 @@ body {
   font-size: 40px;
 }
 
-.container .text > p:first-of-type {
+.container .text>p:first-of-type {
   color: var(--mainColor);
   font-weight: bold;
   position: relative;
   padding-left: 60px;
 }
-.container .text > p:first-of-type::before {
+
+.container .text>p:first-of-type::before {
   content: "";
   width: 50px;
   height: 2px;
   position: absolute;
   background-color: #cf2e2e;
-  
+
   left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
-.container .text > p:first-of-type::after {
+
+.container .text>p:first-of-type::after {
   width: 10px;
   height: 10px;
   content: "";
@@ -76,7 +79,7 @@ body {
   background-color: white;
 }
 
-.container .text > p:last-of-type {
+.container .text>p:last-of-type {
   line-height: 1.8;
   color: #9c9893;
 }
@@ -88,6 +91,7 @@ body {
 
 
 }
+
 .container .text .actions .icon {
   border: 1px solid #9c9893;
   display: grid;
@@ -95,7 +99,7 @@ body {
   align-items: center;
   justify-items: center;
   position: relative;
-  
+
   height: 150px;
 }
 
@@ -105,7 +109,7 @@ body {
 
 .container .text .actions .icon::before {
   content: "";
-  
+
   border: 10px solid #cf2e2e;
   border-left-color: transparent;
   border-bottom-color: transparent;
@@ -118,6 +122,7 @@ body {
   font-weight: bold;
   position: relative;
 }
+
 .container .text .actions .icon p::after {
   counter-increment: noaman;
   content: "0" counter(noaman);
@@ -128,5 +133,33 @@ body {
   top: -40px;
   right: -20px;
   z-index: -1;
-  
+
 }
+
+  .container .image .img img {
+    left: -30px;
+  }
+
+  @media (max-width:767px) {
+    .container {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+      gap: 2rem;
+    }
+
+    .container .image>.img {
+      border: 15px solid rgb(207, 46, 46, .5);
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+    .container .text h1 {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    .container .text p:last-of-type { 
+      margin: 1.5rem 0;
+      }
+    
+  }
