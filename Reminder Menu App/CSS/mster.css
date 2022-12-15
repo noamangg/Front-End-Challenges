@@ -13,7 +13,7 @@
 body {
   width: 100%;
   height: 100vh;
-  
+  position: relative;
 }
 body main {
   display: flex;
@@ -193,3 +193,4 @@ body main {
 .lists-bar .lists .do p {
   border-bottom: 1px solid #d7d7d7;
 }
+
