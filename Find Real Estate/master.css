@@ -1,0 +1,65 @@
+
+
+* {
+  
+  font-family: Arial, Helvetica, sans-serif;
+  
+  box-sizing: border-box;
+  --mainColor: #0eaaa6;
+  --iconColor: #f7f7f7;
+}
+
+body {
+  
+}
+
+main {
+  padding: 2rem;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+}
+main form {
+  padding: 1.5rem 2rem;
+  background-color: black;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main form input {
+  padding: .5rem;
+  
+  outline: none;
+  border: none;
+}
+
+main form .price {
+  display: flex;
+}
+main form .price::before {
+  content: "$";
+  background-color: var(--iconColor, #f7f7f7);
+  padding: .5rem .75rem;
+}
+input[placeholder="Main Price"]::before,
+input[placeholder="Main Price"]::before {
+  content: "$";
+  background-color: red;
+  
+}
+main form input[type="submit"] {
+  background-color: var(--mainColor, #0eaaa6);
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+
+main .text {
+  background-color: var(--mainColor, #0eaaa6);
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
