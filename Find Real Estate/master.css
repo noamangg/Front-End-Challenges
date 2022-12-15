@@ -3,19 +3,18 @@
 * {
   
   font-family: Arial, Helvetica, sans-serif;
-  
+  margin: 0;
   box-sizing: border-box;
   --mainColor: #0eaaa6;
   --iconColor: #f7f7f7;
 }
 
 body {
-  
+  height: 100vh;
 }
 
 main {
-  padding: 2rem;
-  
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -23,15 +22,36 @@ main form {
   padding: 1.5rem 2rem;
   background-color: black;
   
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, auto) repeat(2, 1fr) auto;
+  gap: 1rem;
 }
+@media (max-width: 767px) {
+  main form {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+  }
+}
+@media (max-width: 450px) {
+    main form {
+      grid-template-columns: repeat(2, 1fr);
+  
+    }
+}
+@media (max-width: 250px) {
+  main form {
+    grid-template-columns: 1fr;
+
+  }
+}
+
 main form input {
   padding: .5rem;
-  
+  height: 100%;
   outline: none;
   border: none;
+  width: 100%;
+  border-radius: .1rem;
 }
 
 main form .price {
@@ -41,25 +61,79 @@ main form .price::before {
   content: "$";
   background-color: var(--iconColor, #f7f7f7);
   padding: .5rem .75rem;
+  border-top-left-radius: .1rem;
+  border-bottom-left-radius: .1rem;
 }
-input[placeholder="Main Price"]::before,
-input[placeholder="Main Price"]::before {
-  content: "$";
-  background-color: red;
-  
+main form .price input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
+
 main form input[type="submit"] {
   background-color: var(--mainColor, #0eaaa6);
   color: white;
   padding: .5rem 1rem;
-  border-radius: .25rem;
+  border-radius: .1rem;
   cursor: pointer;
 }
 
 main .text {
   background-color: var(--mainColor, #0eaaa6);
-  padding: 1.5rem;
+  padding: 3rem 2rem;
   text-align: center;
   color: white;
+  height: 100%;
 }
 
+
+form .category {
+  position: relative;
+}
+form .category span{
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: calc(50% + 2.5px);
+  right: .5rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: 5px solid;
+  border-color: rgb(141, 141, 141) transparent transparent transparent;
+}
+form .category ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 1rem);
+  width: 100%;
+  list-style: none;
+  padding: 0;
+
+}
+form .category ul li {
+  width: 100%;
+  background-color: #eee;
+  border-bottom: 1px solid #f7f7f7;
+  padding: 1rem;
+  cursor: pointer;
+  transition: .5s;
+  color: var(--mainColor, #0eaaa6);
+}
+form .category ul li:first-child {
+  border-top-left-radius: 0.1rem;
+  border-top-right-radius: 0.1rem;
+}
+form .category ul li:last-child {
+  border-bottom-left-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem;
+}
+form .category ul li:hover {
+  padding-left: 2rem;
+}
+
+form .category span:hover + ul {
+  display: block;
+}
+form .category input:focus + span + ul {
+  display: block;
+}
