@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
+
+  --mainColor: #1652f0;
+  --filedsbgColor: #f2f6fe;
+  --textColor: #66768d;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  height: inherit;
+  gap: 40px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: auto 1fr;
+  gap: 40px;
+  row-gap: 60px;
+  height: 100%;
+  padding-right: 40px;
+}
+
+
+header {
+  grid-column: span 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--mainColor, #1652f0);
+  align-items: center;
+  padding: 20px;
+  padding-left: 40px;
+  margin-left: -40px;
+  position: relative;
+  border-bottom: 1px solid var(--filedsbgColor);
+}
+
+header .logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .logo i {
+  font-size: 30px;
+}
+
+header .info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .bitcoin {
+  display: flex;
+  gap: 10px;
+  border: solid 1px var(--filedsbgColor);
+  border-radius: 20px;
+}
+
+header .bitcoin p {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+header .bitcoin p:first-child {
+  background-color: var(--filedsbgColor, #f2f6fe);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+header .bitcoin p:first-child::after {
+  content: "₿";
+}
+
+header .bitcoin p:last-child::after {
+  content: "USD";
+}
+
+header .info>p {
+  color: #66768d;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+
+}
+
+header .info>p::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f007';
+  background-color: var(--mainColor, #1652f0);
+  padding: 10px;
+  color: white;
+  border-radius: 50%;
+}
+
+header .info>p::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f003';
+}
+
+header>p {
+  position: absolute;
+  bottom: -35px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+header>p>span {
+  color: var(--textColor, #66768d);
+
+}
+
+/* aside style */
+aside {}
+
+aside {
+  height: 100%;
+  background-color: #0d40c6;
+  color: white;
+  padding: 5px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-content: center;
+
+}
+
+aside .icons {
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+}
+
+aside .icons i {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+aside .icons i.active,
+aside .icons i:hover {
+  background-color: var(--mainColor, #1652f0);
+
+}
+
+/* Left Style */
+main .left {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+main .left .button {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+main .left .button button {
+  width: calc(48% - 5px);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  min-height: 40px;
+}
+
+main .left .button button:first-child {
+  color: white;
+  background-color: var(--mainColor, #1652f0);
+}
+
+main .left .button button:last-child {
+  color: var(--mainColor, #1652f0);
+  background-color: white;
+  border: 1px solid var(--filedsbgColor);
+}
+
+main .left .inputs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .left .inputs label {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+main .left .inputs input {
+  width: 50%;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  background-color: var(--filedsbgColor, #f2f6fe);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 5px;
+}
+
+main .left .inputs input:first-of-type {
+  border-right: 1px solid white;
+}
+
+main .left .inputs:last-of-type input::placeholder {
+  opacity: .5;
+}
+
+main .left .inputs:last-of-type>p:last-child {
+  margin: 10px 0;
+  width: 100%;
+  color: var(--textColor, #66768d);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .left .inputs:last-of-type>p:last-child::after {
+  content: "$4970 remaining";
+  font-size: 12px;
+  color: black;
+}
+
+main .left>input[type="submit"] {
+  width: 100%;
+  cursor: pointer;
+  background-color: #10d876;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  min-height: 40px;
+}
+
+main .left>p:last-child {
+  margin-top: 50px;
+  color: var(--textColor, #66768d);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* Right Style */
+main .right {
+  padding-bottom: 20px;
+
+}
+
+main .right .accounts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main .right .accounts .account {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+main .right .accounts .account img {
+  width: 60px;
+  height: 60%;
+  border-radius: 50%;
+}
+
+main .right .accounts .account .info {
+  line-height: 1.5;
+}
+
+main .right .accounts .account .info p {
+  color: var(--mainColor, #1652f0);
+}
+
+main .right .accounts .account:last-child {
+  flex-direction: row-reverse;
+  justify-items: flex-end;
+  text-align: end;
+}
+
+main .right .fileds {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+main .right .fileds .inputs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 5px;
+  padding: 15px;
+  background-color: var(--filedsbgColor, #f2f6fe);
+  color: var(--textColor, #66768d);
+  border-radius: 5px;
+}
+
+main .right .fileds .inputs p:first-child {
+  width: 40%;
+}
+
+main .right .fileds .inputs p:last-child {
+  width: 60%;
+}
+
+
+@media (max-width: 552px) {
+  * {
+    font-size: 14px;
+  }
+  main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    row-gap: 40px;
+    padding-right: 10px;
+  }
+  header {
+    grid-column: span 1;
+    padding: 10px;
+    gap: 10px;
+    margin-left: 0;
+  }
+  .container {
+    gap: 10px;
+  }
+
+  main .right .accounts .account{
+    width: calc(50% - 5px);
+    
+  }
+
+
+}

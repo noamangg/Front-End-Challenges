@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  --mainColor: #13c8a6;
+  --mainColorBlack: #229e87;
+}
+body {
+  height: 100vh;
+  background-color: #eee;
+}
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 3rem 4rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+  width: 100%;
+}
+
+.plans .plan {
+  padding: 3rem 6rem;
+  background-color: white;
+  color: #2d2d43;
+  text-align: center;
+  position: relative;
+  border-radius: .5rem;
+  margin-right: 1rem;
+}
+.plans .plan h2 {
+  font-size: 5em;
+  font-weight: normal;
+  position: relative;
+}
+.plans .plan h2::before {
+  content: "$";
+  position: absolute;
+  font-size: .7em;
+  top: -0.2em;
+  left: -0.2em;
+}
+.plans .plan p {
+  font-size: 1em;
+  font-weight: bold;
+  
+  background-color: var(--mainColor);
+  color: white;
+  padding: .8rem 3.5rem;
+  position: absolute;
+  top: 9.3rem;
+  left: -0.7rem;
+  font-size: 1.5em;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.plans .plan p::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: .34rem solid;
+  border-color:   transparent var(--mainColorBlack) var(--mainColorBlack) transparent ;
+  position: absolute;
+  top: -0.68rem;
+  left: 0rem;
+}
+
+.plans .plan ul {
+  font-size: 1.2em;
+  list-style: none;
+  padding: 0;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+.plans .plan ul li {
+  margin: 1em 0;
+  font-size: .9em;
+}
+
+.plans .plan button {
+  font-size: 1em;
+  padding: 1em 2em;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  background-color: var(--mainColor);
+  color: white;
+  font-weight: bold;
+  border-radius: .5rem;
+}
+
+.plan.plan-tow p,
+.plans .plan.plan-tow button{
+  --mainColor: #efcb53;
+  --mainColorBlack: #bb9d3a;
+}
+.plan.plan-three p,
+.plans .plan.plan-three button {
+  --mainColor: #555fae;
+  --mainColorBlack: #3c4481;
+}
+
+@media (max-width: 767px) {
+  .plans {
+    padding: 2rem;
+    justify-content: center;
+  }
+  .plans .plan {
+    margin-right: 0;
+    padding: 4rem;
+  }
+}

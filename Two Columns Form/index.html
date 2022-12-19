@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Columns Form</title>
+  
+  <link rel="stylesheet" href="master.css">
+</head>
+<body>
+  
+  <form action="formReq.html" method="get">
+    
+    <div class="col">
+      <div class="inputs">
+        <label for="username">Username</label>
+      <input type="text" name="Username" id="username" placeholder="Type Your Name in English Only">
+      </div>
+      
+      <div class="inputs">
+        <label for="password">Password</label>
+        <input type="password" name="Password" id="password" placeholder="Type a Complex Password">
+      </div>
+      
+      <div class="inputs">
+        <label for="email">Email</label>
+        <input type="email" name="Email" id="email" placeholder="Type a Valid Email">
+      </div>
+    </div>
+    
+    <div class="col2">
+      <div class="inputs">
+        <label for="phone">Phone</label>
+        <input type="number" name="Phone" id="phone">
+      </div>
+      
+      <div class="textarea inputs">
+        <label for="briefs">Briefs</label>
+        <textarea name="Briefs" id="briefs">
+          
+        </textarea>
+      </div>
+    </div>
+    
+    <input type="submit" value="Register">
+  </form>
+  
+</body>
+</html>

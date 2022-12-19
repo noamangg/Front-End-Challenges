@@ -1,0 +1,243 @@
+* {
+
+  --mainColor: #009688;
+
+  margin: 0;
+
+  box-sizing: border-box;
+  --paddingSection: 20px;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.containers {
+  padding: var(--paddingSection, 20px);
+  background-color: white;
+}
+
+.margin-bo-10 {
+  margin-bottom: 10px;
+}
+body {
+  background-color: #eee;
+}
+main {
+  width: 100%;
+  padding: 20px 75px;
+
+  background-color: #eee;
+
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+main .info {
+  width: 100%;
+
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+
+
+main .info .left {
+  padding: var(--paddingSection, 20px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+  border-right: 4px solid #eee;
+
+}
+
+main .info .left img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  border: solid 4px #eee;
+}
+
+main .info .left h3 {
+  width: 100%;
+  text-align: center;
+
+}
+
+
+main .info .left p {
+  width: 100%;
+  text-align: center;
+}
+
+main .info .left p:first-of-type {
+  width: 90%;
+  height: 20px;
+  background-color: var(--mainColor, #009688);
+
+  border-radius: 5px;
+
+  position: relative;
+}
+
+main .info .left p:first-of-type::after {
+  width: 30%;
+  height: 20px;
+  background-color: #eee;
+  content: "";
+  right: -1px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+
+  position: absolute;
+}
+
+main .info .left p>span {
+
+  color: var(--mainColor, #009688);
+  font-weight: bold;
+}
+
+.info .right {
+  padding: var(--paddingSection, 20px);
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+
+  position: relative;
+}
+
+.info .right::after {
+  content: "74 Days In The Ship";
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+}
+
+.info .right p {
+  line-height: 1.8;
+  font-size: 20px;
+}
+
+
+main h2 {
+  color: white;
+  font-weight: bold;
+  background-color: #607d8b;
+  width: fit-content;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.points>p {
+  margin-bottom: 10px;
+}
+
+.points>p>span:first-child {
+  color: var(--mainColor, #009688);
+  font-weight: bold;
+}
+
+.points>p>span:last-child {
+  color: #e9246a;
+}
+
+.trophies>div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 60px);
+  gap: 10px;
+
+
+}
+
+.trophies div img {
+  width: 60px;
+  height: 60px;
+}
+
+.ladder p span:first-child {
+  color: var(--mainColor, #009688);
+}
+
+.ladder p span:last-child {
+  color: #e9246a;
+  font-weight: bold;
+}
+
+.powers .child-tro {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2px #eee;
+  padding: 10px 0px;
+}
+
+
+
+
+.powers .child-tro p:last-child {
+  color: var(--mainColor, #009688);
+}
+.powers .child-tro:not(:nth-child(2), :nth-child(3), :nth-child(5), :nth-child(7)) p:last-child {
+  color: #e9246a;
+}
+
+@media (max-width: 731px) {
+  main .info {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 10px 25px;
+  }
+
+  main .info .left {
+    border-right: none;
+    margin-bottom: 20px;
+  }
+
+  .info .right::after {
+    font-size: 10px;
+  }
+
+}
+
+.resloution {
+  opacity: .2;
+}
+
+
+
+footer {
+  min-height: 60px;
+  background-color: white;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+footer div span:first-child {
+  color: var(--mainColor);
+  font-size: 20px;
+}
+
+footer div {
+  font-size: 12px;
+}
+
+footer div a:last-child {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}

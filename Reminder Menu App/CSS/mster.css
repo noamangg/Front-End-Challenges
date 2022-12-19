@@ -1,0 +1,196 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  ---textColor: #959299;
+  --bgColor: #007bff;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.reminder-widget {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  width: 30%;
+  gap: 2rem;
+  
+  background-color: #f2eff6;
+  padding: 1rem 1rem 2rem;
+}
+
+@media (max-width:800px) {
+  .reminder-widget {
+    width: 70%;
+  }
+}
+@media (max-width:400px) {
+  .reminder-widget {
+    width: 90%;
+  }
+}
+@media (max-width:300px) {
+  .reminder-widget {
+    width: 100%;
+  }
+}
+
+.reminder-widget .search-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+.reminder-widget .search-bar button {
+  justify-self: end;
+  width: fit-content;
+  padding: .5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.reminder-widget .search-bar .search {
+  position: relative;
+}
+.reminder-widget .search-bar .search input {
+  align-self: flex-end;
+  width: 100%;
+  height: 3rem;
+  border-radius: .5rem;
+  border: none;
+  outline: 0;
+  padding: .5rem .5rem .5rem 2.25rem;
+  background-color: #e3e2e8;
+}
+.reminder-widget .search-bar .search input::placeholder {
+  font-size: 1rem;
+  color: var(---textColor, #959299);
+}
+
+.reminder-widget .search-bar .search::before {
+  content: '\f002';
+  font-family: "Font Awesome 6 free"; 
+	font-weight: 600; 
+  color: var(---textColor, #959299);
+  position: absolute;
+  top: 46%;
+  transform: translateY(-50%);
+  left: .75rem;
+
+}
+.reminder-widget .statics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.reminder-widget .statics > div {
+  background-color: white;
+  padding: 1rem;
+  border-radius: .5rem;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.reminder-widget .statics > div > p {
+  color: var(---textColor, #5a626c);
+  font-weight: bold;
+}
+.reminder-widget .statics > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reminder-widget .statics > div > div i {
+  font-size: 1rem;
+  padding: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bgColor, #007bff);
+  border-radius: 50%;
+  color: white;
+}
+.reminder-widget .statics > div:nth-child(2) > div i {
+  --bgColor: #ff9500;
+}
+.reminder-widget .statics > div:nth-child(3) > div i {
+  --bgColor: #5a626c;
+}
+.reminder-widget .statics > div:last-child > div i {
+  --bgColor: #ff4c2d;
+}
+
+.reminder-widget .statics > div > div p {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.lists-bar {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: 1fr;
+}
+.lists-bar .lists {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: white;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+.lists-bar .lists .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.lists-bar .lists .list p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  padding: 1rem .75rem;
+}
+.lists-bar .lists .list::before {
+  --bgColor: #1ab758;
+  content: '\f03a';
+  font-family: "Font Awesome 6 free"; 
+  font-weight: 600;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;  
+  padding: .75rem;
+  background-color: var(--bgColor, #1ab758);
+  border-radius: 50%;
+  color: white;
+}
+.lists-bar .lists .family::before {
+  --bgColor: #fcc711;
+}
+.lists-bar .lists .do p {
+  border-bottom: 1px solid #d7d7d7;
+}
+
