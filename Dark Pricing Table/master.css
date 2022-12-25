@@ -1,0 +1,116 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  font-family: sans-serif;
+  margin: 0;
+  
+  --bg-color-1: #242424;
+  --bg-color-2: #2a2a2a;
+  --active-color: #03a9f4;
+  --list-color: #6f7071;
+}
+
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+body .container {
+  margin: 2rem 2%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box {
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  height: fit-content;
+  color: white;
+  background-color: var(--bg-color-1, #242424);
+  min-width: 300px;
+  flex-basis: 25%;
+  border-right: 1px solid rgb(182, 182, 182, .3);
+  border-bottom: 1px solid rgb(182, 182, 182, .3);
+}
+.box h3 {
+  width: 100%;
+  font-size: 2rem;
+}
+.box p {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: bold;
+  
+  position: relative;
+}
+.box p::before {
+  content: "$";
+  
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  font-size: calc(100% - .5rem);
+}
+.box p::after {
+  content: "/ mo";
+  font-weight: normal;
+  font-size: calc(100% - .5rem);
+}
+.box ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  color: var(--list-color, #6f7071);
+}
+.box ul li {
+  padding: 1.25rem 0;
+  border-top: 1px solid rgb(182, 182, 182, .3);
+}
+.box ul li:nth-child(even) {
+  background-color: var(--bg-color-2, #2a2a2a);
+}
+.box button {
+  padding: .75rem 2rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  transition: .25s;
+}
+.box button:hover {
+  color: var(---color-1, #242424);
+  background-color: white;
+}
+.premium {
+  padding: 5rem 0;
+  background-color: var(--active-color, #03a9f4);
+}
+.premium ul li {
+  background-color: var(--active-color, #03a9f4) !important;
+  color: white;
+}
+.premium ul li:last-of-type {
+  border-top: 1px solid rgb(182, 182, 182, .3);
+}
+
+@media (max-width: 950px) {
+  .premium {
+    padding: 3rem 0;
+  }
+  
+}
