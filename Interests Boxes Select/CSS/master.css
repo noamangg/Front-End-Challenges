@@ -3,14 +3,16 @@
   --elements-background-color: #eeecfd;
   --element-border-color: #e0e0e1;
 
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 * {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+::before,
+::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -20,83 +22,95 @@ body {
 .container {
   margin-left: 10%;
   margin-right: 10%;
-
 }
 
 
-
+h1 {
+  margin: 2.5rem 0;
+  text-align: center;
+  background-color: rgb(92, 72, 241, 10%);
+  padding: 2rem;
+  font-size: 1.5rem;
+  border-radius: .25rem;
+  color: var(--main-purple-color);
+}
 .inter {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 1rem;
 }
 
-.inter>div {
+.inter label {
   background-color: white;
-  border: 1px solid rgb(0, 0, 0, .2);
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: grid;
+  justify-content: center;
   position: relative;
-  
-  height: fit-content;
-}
-
-.inter>div label {
   text-align: center;
-  height: 100%;
-  display: block;
+  border: 2px solid var(--element-border-color);
 }
 
-.inter>div label i {
-  margin-top: 1.5rem;
-  font-size: 4rem;
-  color: var(--main-purple-color, #5c48f1);
-  width: 100%;
-  margin-bottom: 1.5rem;
+.inter label:has(input[type="checkbox"]:checked) {
+  border-color: var(--main-purple-color, #5c48f1);
 }
-
-.inter>div label p {
-  font-weight: bold;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.inter>div input[type="radio"] {
-  appearance: none;
-  position: absolute;
-}
-
-.inter>div label::before {
+.inter label:has(input[type="checkbox"]:checked)::before {
   content: "";
-  width: 18px;
-  height: 18px;
-  border: 1px solid rgb(0, 0, 0, .2);
-  border-radius: .25rem;
+  background-color: rgb(92, 72, 241, 20%);
   position: absolute;
-  top: 10px;
-  left: 10px
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.inter> div input[type="radio"]:checked + label::before {
-  border: 1px solid var(--main-purple-color, #5c48f1);
+.inter input[type="checkbox"] {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+  appearance: none;
 }
 
-
-.inter>div input[type="radio"]:checked + label::after,
-.inter>div input[type="radio"]:not(:checked) + label:hover::after {
+.inter input[type="checkbox"]::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--main-purple-color, #5c48f1);
+  position: absolute;
+  border-radius: .25rem;
+  top: 0;
+  left: 0;
+}
+.inter input[type="checkbox"]::after {
   content: "";
   width: 15px;
   height: 15px;
-  background-color: var(--main-purple-color, #5c48f1);
-  border-radius: .25rem;
   position: absolute;
-  top: 12.5px;
-  left: 12.5px
+  border-radius: .25rem;
+  top: 5.5px;
+  left: 5.5px;
+  transition: .25s;
 }
-.inter>div input[type="radio"]:checked+label::after {
-  
+.inter input[type="checkbox"]:checked::after {
+  background-color: var(--main-purple-color, #5c48f1);
 }
 
-.inter>div input[type="radio"]:not(:checked) + label:hover::after { 
-  background-color: rgb(0, 0, 0, .2);
-
-
+.inter input[type="checkbox"]:is(:not(:checked)):hover::after {
+  background-color: var(--main-purple-color, #5c48f1);
+  opacity: .5;
 }
+.inter i {
+  margin: 1.5rem 0;
+  font-size: 4rem;
+  color: var(--main-purple-color, #5c48f1);
+  width: 100%;
+  z-index: 4;
+}
+
+.inter p {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  z-index: 4;
+}
+
